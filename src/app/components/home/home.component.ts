@@ -5,7 +5,7 @@ import { CounterService } from '../../services/counter-service.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [CounterService]
+  // providers: [CounterService]
 })
 export class HomeComponent implements OnInit {
 initialTitle : string = "Welcome to our theatre";
@@ -42,7 +42,7 @@ movies : Object[] = [
   }
 
   countPageViews(){
-    this.counter.increment();
+    this.counter.incrementViewCount();
   }
 
 }
