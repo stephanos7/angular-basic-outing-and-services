@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieComponent implements OnInit {
 movieId: number;
-movieTitle: String;
+movieName: any;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -16,7 +16,13 @@ movieTitle: String;
     this.route.params.subscribe((params) => {
       this.movieId = Number(params['id']);
       console.log(params);
-    });
+        });
+
+      this.route.queryParams.subscribe((queryParams)=>{
+        this.movieName = (queryParams['movieName']);
+        console.log(this.movieName);
+      });
+   
   }
 
 }
