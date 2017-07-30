@@ -36,13 +36,17 @@ movies : Object[] = [
 ];
 
 
-  constructor(private counter: CounterService) { }
+  constructor(private viewCounter: CounterService, 
+              private likeCounter: CounterService) { }
 
   ngOnInit() {
   }
 
   countPageViews(){
-    this.counter.incrementViewCount();
+    this.viewCounter.incrementViewCount();
+  }
+  countLikes(){
+    this.likeCounter.incrementLikeCount();
   }
 
 }
