@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../../services/counter-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [CounterService]
 })
 export class HomeComponent implements OnInit {
 initialTitle : string = "Welcome to our theatre";
@@ -34,9 +36,13 @@ movies : Object[] = [
 ];
 
 
-  constructor() { }
+  constructor(private counter: CounterService) { }
 
   ngOnInit() {
+  }
+
+  countPageViews(){
+    this.counter.increment();
   }
 
 }

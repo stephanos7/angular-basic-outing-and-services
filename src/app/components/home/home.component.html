@@ -6,7 +6,8 @@
     <div class="col-lg-3 movie-box" *ngFor="let movie of movies">
       <img src="{{movie.poster}}">
       <h4>{{movie.title}}</h4>
-      <a [routerLink]="['/movie', movie.id]" class="btn btn-sm btn-info">MORE INFO</a>
+      <a class="btn btn-sm btn-info" [routerLink] ="['/movie', movie.id]"
+                                     (click)="countPageViews()">MORE INFO</a>
     </div>
   </div>
 </div>
