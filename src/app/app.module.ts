@@ -4,18 +4,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { JumboComponent } from './components/jumbo/jumbo.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes : Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component:},
-  { path: '/about', component:}
+  { path: 'home', component: HomeComponent}
+  // { path: '/about', component:}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    JumboComponent
+    JumboComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
