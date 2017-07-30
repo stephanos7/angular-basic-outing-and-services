@@ -7,6 +7,9 @@ import { JumboComponent } from './components/jumbo/jumbo.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { CounterService } from './services/counter-service.service';
+
+
 
 const routes : Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,7 +31,7 @@ const routes : Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
