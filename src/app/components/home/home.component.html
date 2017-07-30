@@ -1,3 +1,11 @@
 <app-nav></app-nav>
 <app-jumbo></app-jumbo>
 {{title}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 movie-box" *ngFor="let movie of movies">
+      <img src="{{movie.poster}}">
+      <h4>{{movie.title}}</h4>
+    </div>
+  </div>
+</div>
