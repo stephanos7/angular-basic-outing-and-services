@@ -8,7 +8,9 @@
       <img src="{{movie.poster}}">
       <h4>{{movie.title}}</h4>
       <a class="btn btn-sm btn-info" [routerLink] ="['/movie', movie.id]"
-                                     [queryParams]="{movieName: movie.title}">MORE INFO</a>
+                                     [queryParams]="{movieName: movie.title,
+                                                     movieDescription: movie.synopsis}">
+                                                     MORE INFO</a>
       <br>
     </div>
   </div>
