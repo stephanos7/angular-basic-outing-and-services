@@ -45,9 +45,9 @@ movies : Object[] = [
   ngOnInit() {
   }
 
-  countPageViews(){
-    this.viewCounter.incrementViewCount();
-  }
+  // countPageViews(){
+  //   this.viewCounter.incrementViewCount();
+  // }
   countLikes(){
     this.likeCounter.incrementLikeCount();
   }
