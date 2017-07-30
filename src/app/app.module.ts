@@ -6,11 +6,13 @@ import { NavComponent } from './components/nav/nav.component';
 import { JumboComponent } from './components/jumbo/jumbo.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 const routes : Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
-  { path: 'about', component: AboutComponent}
+  { path: 'about', component: AboutComponent},
+  { path: 'movie/:id', component: MovieComponent}
 ];
 
 @NgModule({
@@ -19,7 +21,8 @@ const routes : Routes = [
     NavComponent,
     JumboComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
