@@ -1,13 +1,12 @@
 .movie-box{
   height: 500px;
   padding: 15px;
-  background-color: bisque;
 }
 
 
 img{
-  width: 90%;
-  height: 350px;
+  width: 100%;
+  height: 380px;
  
 }
 
