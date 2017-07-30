@@ -11,8 +11,7 @@ likeCount: number = 0;
     return this.viewCount ++;
   }
 
-  incrementLikeCount(){
-    this.likeCount++
-    console.log(this.likeCount);
+  incrementLikeCount():number{
+    return this.likeCount++
   }
 }
