@@ -9,6 +9,8 @@ import { CounterService } from '../../services/counter-service.service';
 })
 export class HomeComponent implements OnInit {
 initialTitle : string = "Welcome to our theatre";
+totalLikes: number = this.showTotalLikes.likeCount;
+
 movies : Object[] = [
   {
     id: 1,
@@ -37,7 +39,8 @@ movies : Object[] = [
 
 
   constructor(private viewCounter: CounterService, 
-              private likeCounter: CounterService) { }
+              private likeCounter: CounterService,
+              private showTotalLikes: CounterService) { }
 
   ngOnInit() {
   }
