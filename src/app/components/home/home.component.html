@@ -9,7 +9,8 @@
       <h4>{{movie.title}}</h4>
       <a class="btn btn-sm btn-info" [routerLink] ="['/movie', movie.id]"
                                      [queryParams]="{movieName: movie.title,
-                                                     movieDescription: movie.synopsis}">
+                                                     movieDescription: movie.synopsis,
+                                                     movieImage: movie.poster}">
                                                      MORE INFO</a>
       <br>
     </div>

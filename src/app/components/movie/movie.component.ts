@@ -10,6 +10,7 @@ export class MovieComponent implements OnInit {
 movieId: number;
 movieName: string;
 movieDescription: string;
+movieImage: any;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -20,10 +21,13 @@ movieDescription: string;
         });
 
       this.route.queryParams.subscribe((queryParams)=>{
-        this.movieName = (queryParams['movieName']);
-        this.movieDescription = queryParams['movieDescription']
+        this.movieName = queryParams['movieName'];
+        this.movieDescription = queryParams['movieDescription'];
+        this.movieImage = queryParams['movieImage'];
         console.log(this.movieName);
         console.log(this.movieDescription);
+        console.log(this.movieImage);
+        console.log("hello");
       });
    
   }
